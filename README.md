@@ -14,14 +14,19 @@ Since I'm evaluating Liquibase against other similar tools I have come up with a
 ### POC Complexity
 *how difficult is it to build a working demo*
 - Liquibase can be installed with `choco install liquibase` (sort of, package in choco registry is a bit outdated)
+- Read more about strucuring a liquibase project (single/multi-schema, object/release-oriented)
 
 ### Cost
-*What can I do with the free plans*
+*What I can and cannot do with the free plans*
+- 
 
 ### SQL Server Compatibility
 *Minimum SQL Server versions it works with*
-
 - Very Java-esque, also, apparently the SQL syntax uses PL/SQL specifically?
+- List of supported databases can be found here: https://docs.liquibase.com/start/tutorials/home.html
+  - On Premises SQL Server is supported from versions 2014 to 2022
+  - Also supports Azure SQL and Azure SQL Managed versions
+- https://docs.liquibase.com/start/tutorials/ms-sql-server.html
 
 ### Impact on Developer Workflow
 *How transparent will the transition be, from not knowing a new tool is being used in the pipeline to having to learn a brand new tool*
@@ -31,6 +36,8 @@ Since I'm evaluating Liquibase against other similar tools I have come up with a
 
 ### Documentation
 *How well is the project documented*
+- There is a `liquibase init project` command that should exist according to the documentation, but doesn't
+  - Had to reinstall. Free version of liquibase tells me to delete a .jar if I'm using the free version but the `init project` probably was in it
 
 ### Support
 *Taking into consideration if the tool is still currently maintained and supported, and how much longer this support will last*
