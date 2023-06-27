@@ -13,12 +13,15 @@ Since I'm evaluating Liquibase against other similar tools I have come up with a
 
 ### POC Complexity
 *how difficult is it to build a working demo*
+- Liquibase can be installed with `choco install liquibase` (sort of, package in choco registry is a bit outdated)
 
 ### Cost
 *What can I do with the free plans*
 
 ### SQL Server Compatibility
 *Minimum SQL Server versions it works with*
+
+- Very Java-esque, also, apparently the SQL syntax uses PL/SQL specifically?
 
 ### Impact on Developer Workflow
 *How transparent will the transition be, from not knowing a new tool is being used in the pipeline to having to learn a brand new tool*
@@ -37,6 +40,12 @@ Since I'm evaluating Liquibase against other similar tools I have come up with a
 
 ### Reuse of Existing SQL Scripts
 *How well can I reuse my existing SQL scripts repository*
+
+- Not that good since there seem to be some mandatory annotations for all sql scripts:
+```sql
+--changeset your.name:4
+ALTER  TABLE  person  ADD  nickname  varchar(30);
+```
 
 ### Maintenance of Integration
 *How much has to be set up in order for CI/CD to work and how fragile is it*
